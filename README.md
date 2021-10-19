@@ -22,6 +22,7 @@ To run this:
 |-------------------|--------|------------------------------|------------------------------------------|-----------------|-----------------|
 | A2338 / Apple M1  | 4.4    | Homebrew, Apple clang 12.0.5 | Ideal conditions                         | 81s             | 574s            |
 | A2338 / Apple M1  | 4.4    | Homebrew, Apple clang 12.0.5 | Fan locked at 1200rpm (A2337 comparable) | 81s             | 589s            |
+| Erazer ? / Intel ?| 4.2.4    | Ubuntu, GCC 9.3.0      |                                          | 306s            | TBD             |
 | AMD Ryzen 9 3900X | 4.4    | Manjaro, GCC 11.1.0          |                                          | 43s             | 112s            |
 
 The missing NEON support in x265 really hurts ARM chips.
