@@ -1,5 +1,13 @@
 # CMFFMB
 
+## Dependencies
+
+- `youtube-dl` (might switch to `youtube-dlp` soon)
+- `ffmpeg`
+- a POSIX system
+
+## Usage
+
 To run this:
 
 0. Clone the repository
