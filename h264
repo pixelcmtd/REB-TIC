@@ -1,3 +1,4 @@
 #!/bin/sh
 
+rm -f tmp/gutsoh264.mp4
 time ffmpeg -i tmp/gutso.webm -c:v libx264 tmp/gutsoh264.mp4
