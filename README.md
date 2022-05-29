@@ -1,4 +1,4 @@
-# CMFFMB
+# chrissx Media FFMpeg Benchmark
 
 ## Dependencies
 
@@ -15,7 +15,8 @@ To run this:
 2. Run `./x264`
 3. Run `./x265`
 4. Run `./rav1e`
-5. Make a PR adding your results to the table
+5. Run `./versions`
+6. Make a PR adding your results to the table
 
 ## Results
 
@@ -26,7 +27,7 @@ To run this:
 | Erazer ? / Intel ? | 4.2.4                     | Ubuntu, GCC 9.3.0            |                                          | 306s | TBD  | TBD    |
 | AMD Ryzen 9 3900X  | 4.4, 0.161, 3.5, 0.4.1    | Manjaro, GCC 11.1.0          |                                          | 43s  | 112s | 8983s  |
 
-The missing NEON support in x265 really hurts ARM chips.
+The missing NEON support in x265 3.4 really hurts ARM chips.
 
 rav1e only has one A2338 score, because it is currently single-threaded.
 

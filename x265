@@ -1,4 +1,5 @@
 #!/bin/sh
+set -ue
 
 rm -f tmp/gutsoh265.mp4
 time ffmpeg -i tmp/gutso.webm -c:v libx265 tmp/gutsoh265.mp4
