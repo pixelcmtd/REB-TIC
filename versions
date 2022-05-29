@@ -1,8 +1,7 @@
 #!/bin/sh
 set -ue
 
-ffmpeg -version 2>&1 | head -n 1
+ffmpeg -version 2>&1 | head -n 2
 x264 --version 2>&1 | head -n 1
 x265 --version 2>&1 | head -n 1
 rav1e --version 2>&1 | head -n 1
-HandBrakeCLI --version
