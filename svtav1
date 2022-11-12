@@ -1,0 +1,5 @@
+#!/bin/sh
+set -ue
+
+rm -f tmp/gutsosvtav1.mkv
+time ffmpeg -i tmp/gutso.webm -c:v libsvtav1 tmp/gutsosvtav1.mkv
