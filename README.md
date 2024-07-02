@@ -1,12 +1,16 @@
-# chrissx Media FFMpeg Benchmark
+# REB-TIC
 
-## Dependencies
+_**Re**al World **B**enchmarks for **T**asks **I**mportant to **c**hrissx Media_ are a benchmarking suite for all kinds of different machines running POSIX software.
+
+## FFmpeg Benchmark v1
+
+### Dependencies
 
 - `yt-dlp`
 - `ffmpeg`
 - a POSIX system
 
-## Usage
+### Usage
 
 0. Clone the repository (and ensure `yt-dlp` and `ffmpeg` are installed and up-to-date)
 1. Run `./prepare`
@@ -14,7 +18,7 @@
 3. Get the version numbers using `./versions` and your package manager
 4. Make a PR adding your results to the table
 
-## Results
+### Results
 
 | Machine / CPU                                   | FFmpeg | x264  | x265 | rav1e | svtav1 | Distro            | Compiler       | Notes                      | x264  | x265   | rav1e  | svtav1 |
 | ----------------------------------------------- | ------ | ----- | ---- | ----- | ------ | ----------------- | -------------- | -------------------------- | ----- | ------ | ------ | ------ |
