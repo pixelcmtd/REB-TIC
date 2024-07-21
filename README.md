@@ -13,10 +13,8 @@ _**Re**al World **B**enchmarks for **T**asks **I**mportant to **c**hrissx Media_
 ### Usage
 
 0. Clone the repository (and ensure `yt-dlp` and `ffmpeg` are installed and up-to-date)
-1. Run `./prepare`
-2. Run `./x264`, `./x265`, `./rav1e` and `./svtav1`
-3. Get the version numbers using `./versions` and your package manager
-4. Make a PR adding your results to the table
+1. Run `./ffmb` (get the svtav1 version from your package manager)
+2. Make a PR adding your results to the table
 
 ### Results
 

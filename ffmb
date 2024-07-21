@@ -1,0 +1,35 @@
+#!/bin/sh
+set -ue
+
+mkdir -p tmp
+[ -f tmp/gutso.webm ] || yt-dlp -f 303 -o tmp/gutso.webm https://youtu.be/_XVjUqVY-54
+rm -f tmp/gutso*.mp4 tmp/gutso*.mkv
+
+{
+        log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" >&2 ; }
+
+        log versions:
+        ffmpeg -version 2>&1 | head -n 2 >&2
+        x264 --version 2>&1 | head -n 1 >&2
+        x265 --version 2>&1 | head -n 1 >&2
+        rav1e --version 2>&1 | head -n 1 >&2
+
+        log ffmpeg x264 benchmark:
+        time -p sh -c 'ffmpeg -hide_banner -i tmp/gutso.webm -c:v libx264 tmp/gutsoh264.mp4 2>&3'
+
+        log ffmpeg x265 benchmark:
+        time -p sh -c 'ffmpeg -hide_banner -i tmp/gutso.webm -c:v libx265 tmp/gutsoh265.mp4 2>&3'
+
+        log ffmpeg svtav1 benchmark:
+        time -p sh -c 'ffmpeg -hide_banner -i tmp/gutso.webm -c:v libsvtav1 tmp/gutsosvtav1.mkv 2>&3'
+
+        log ffmpeg rav1e benchmark:
+        time -p sh -c 'ffmpeg -hide_banner -i tmp/gutso.webm -c:v librav1e tmp/gutsorav1e.mkv 2>&3'
+} 3>&2 2>&1 | tee tmp/log
+
+echo '
+
+===Log===
+
+'
+cat tmp/log

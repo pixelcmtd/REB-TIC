@@ -1,5 +1,0 @@
-#!/bin/sh
-set -ue
-
-rm -f tmp/gutsorav1e.mkv
-time ffmpeg -i tmp/gutso.webm -c:v librav1e tmp/gutsorav1e.mkv

@@ -1,6 +1,0 @@
-#!/bin/sh
-set -ue
-
-pip3 install -U yt-dlp
-mkdir -p tmp
-yt-dlp -f 303 -o tmp/gutso.webm https://youtu.be/_XVjUqVY-54
